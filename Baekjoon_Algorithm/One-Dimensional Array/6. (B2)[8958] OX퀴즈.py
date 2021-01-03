@@ -29,5 +29,8 @@ OXOXOXOXOXOXOX
 OOOOOOOOOO
 OOOOXOOOOXOOOOX
 '''
+<<<<<<< HEAD
 # 숏코딩으로 아래와 같은 풀이방법도 있다... 나도 언젠가는..?
 # exec("print(sum(v*-~v//2for v in map(len,input().split('X'))));"*int(input()))
+=======
+>>>>>>> d33c927056bc31f373ebd6e369ef8380b752afdd
