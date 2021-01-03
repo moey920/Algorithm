@@ -20,7 +20,6 @@ for i in range(len(OX)) : # 문자열 리스트 OX에서 각 문자열(OX[i]) �
             count = 0
     print(result)
 
-# print(OX)
 
 ''' 테스트 케이스
 5
@@ -30,3 +29,5 @@ OXOXOXOXOXOXOX
 OOOOOOOOOO
 OOOOXOOOOXOOOOX
 '''
+# 숏코딩으로 아래와 같은 풀이방법도 있다... 나도 언젠가는..?
+# exec("print(sum(v*-~v//2for v in map(len,input().split('X'))));"*int(input()))
