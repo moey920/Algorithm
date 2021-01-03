@@ -20,7 +20,6 @@ for i in range(len(OX)) : # 문자열 리스트 OX에서 각 문자열(OX[i]) �
             count = 0
     print(result)
 
-# print(OX)
 
 ''' 테스트 케이스
 5
