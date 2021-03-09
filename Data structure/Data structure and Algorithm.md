@@ -198,3 +198,75 @@ def main():
 if __name__ == "__main__":
     main()
 ```
+
+### 객체 예제
+
+자동차 객체
+Python은 세상의 모든 것을 객체(object)로 바라봅니다.
+
+이 문제에는 자동차 객체가 주어져 있는데요, 아직 불완전한 상태입니다.
+
+객체에 변수와 함수들을 추가해서 완성 해 봅시다.
+
+- 변수 color를 추가 해 봅시다.
+- 함수 speedDown을 추가 해 봅시다.
+- 함수 changeColor를 추가 해 봅시다.
+- 함수 wheelChange의 내용을 변경 해 봅시다.
+
+```
+
+class Car:
+    def __init__(self):
+        self.speed = 0
+        self.year = 2017
+        self.wheel = Wheel("aluminum") # Wheel 이라는 클래스
+        # 1. 여기에 새로운 오브젝트 변수, color를 추가 해 주세요.
+        # 색은 기본적으로 "white"로 설정되도록 해 주세요
+        self.color = "white"
+        
+    def speedUp(self, addSpeed):
+        self.speed += addSpeed
+        
+    # 2. 여기에 새로운 오브젝트 함수, speedDown을 추가해 주세요
+    # 변화시키고 싶은 속도량을 입력 받은 후, 그만큼 속도록 감소시키는 일을 하는 함수입니다.
+    def speedDown(self, subSpeed) :
+        self.speed -= subSpeed
+    
+    # 3. 여기에 새로운 함수, changeColor를 추가 해 봅시다.
+    # 변화시키고 싶은 색을 지정하면, 그 색깔로 차를 도색하는 함수입니다.    
+    def changeColor(self, color):
+        self.color = color
+
+    def wheelChange(self, newWheelType):
+        self.wheel.wheelType = newWheelType
+        # 4. 객체의 데이터로 다른 객체를 사용 할 수도 있습니다. 
+        # Car 객체는 Wheel 객체를 변수로 가지는데요, 
+        # 여기에는 새 바퀴의 색상을 입력받고(newWheelType), 이를 바탕으로 새로운 Wheel 객체를 만들어서
+        # 자동차의 wheel 데이터에 할당 하는 함수를 적어 봅시다.
+    
+
+class Wheel:
+    def __init__(self, newWheelType):
+        self.wheelType = newWheelType
+
+def main():
+    audi = Car()
+    print("고객님의 차량은 {} 년에 출고되었습니다.".format(audi.year))
+    print("현재 속도는 {} km/h 입니다.".format(audi.speed))
+    audi.speedUp(200)
+    print("변경된 속도는 {} km/h 입니다.".format(audi.speed))
+    audi.speedDown(50)
+    print("변경된 속도는 {} km/h 입니다.".format(audi.speed))
+    
+    print("현재 차량 색깔은", audi.color, "입니다.")
+    audi.changeColor('black')
+    print("변경된 차량색깔 :", audi.color)
+    
+    randomWheel = Wheel("aluminum")
+    print("바닥에 {} 재질의 바퀴가 떨어져 있습니다.".format(randomWheel.wheelType))
+    audi.wheelChange('plastic')
+    print("변경된 휠 타입 :", audi.wheel.wheelType)
+    
+if __name__ == "__main__":
+    main()
+```
