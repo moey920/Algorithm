@@ -49,10 +49,10 @@ def fibo(n) :
         - f(n) : n번째 피보나치 수열
     - 구하고자 하는 값을 부분문제로 표현한다.
         - f(n) = f(n-1) + f(n-2)
+
     - Top-down(재귀호출 식)
         - 큰 문제를 작은 문제로 나누어 풀기
         - 작은문제를 풀어 return 해준다.
-
 ```
 fibonacci = {1: 1, 2: 1}
 def fibo(n):
@@ -62,6 +62,7 @@ def fibo(n):
         fibonacci[n] = fibo(n-1) + fibo(n-2)
         return fibonacci[n] 
 ```
+
     - Bottom-up(반복문)
         - 작은 문제부터 차례로 풀어 적는다
         - 크기를 조금씩 늘려서 문제를 푼다
