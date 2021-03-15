@@ -66,6 +66,7 @@ def fibo(n):
     - Bottom-up(반복문)
         - 작은 문제부터 차례로 풀어 적는다
         - 크기를 조금씩 늘려서 문제를 푼다
+        
 ```
 def fibo(n):
     fibonacci = [-1, 1, 1]
